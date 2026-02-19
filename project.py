@@ -2,7 +2,7 @@ import streamlit as st
 from groq import Groq
 
 
-client=Groq(api_key="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")
+client=Groq(api_key="LbZEnp")
 def ask_ai(prompt):
     response=client.chat.completions.create(
         model="llama-3.3-70b-versatile",  
@@ -35,3 +35,4 @@ if st.button("Run"):
         elif option == "Generate Quiz":
             result = ask_ai(f"Create 5 quiz questions with answers from this text: {text}")
         st.success(result)
+
